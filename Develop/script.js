@@ -32,10 +32,10 @@ $(".saveBtn").on("click", function () {
     localStorage.setItem(hour, desc);
 })
 
+//loads saved tasks on page refresh
 function loadTasks() {
     $(".time-block").each(function () {
         var hour = parseInt($(this).attr("id"));
-        console.log(hour);
         $(this).children(".description").val(localStorage.getItem(hour));
     })
 }
